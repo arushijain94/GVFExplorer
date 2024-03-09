@@ -1,0 +1,38 @@
+# single goal room
+exp_name: "goal_0"
+puddle_goal_type: 0
+greedy_policy: 0
+
+seed: 1
+torch_deterministic: true
+cuda: true
+track: false
+wandb_project_name: "simple-gvf-evaluations"
+wandb_entity: "jainarus"
+wandb_group: "room-single-1"
+capture_video: false
+save_model: true
+upload_model: false
+hf_entity: ""
+run_save_loc: "/home/mila/j/jainarus/scratch/single_goal_room/goal_0"
+
+env_id: "RoomSingleGoals-v0"
+total_timesteps: 20000
+learning_rate: !!float 2.5e-4
+buffer_size: 10000
+gamma: 0.99
+tau: 1.0
+target_network_frequency: 100
+batch_size: 64
+start_e: 0.8
+end_e: 0.25
+exploration_fraction: 0.01
+learning_starts: 100
+train_frequency: 4
+eval_frequency: 100
+checkpoint_frequency: 100
+eval_episodes: 20
+plot_frequency: 2500
+
+
+checkpoint_number: 8000

@@ -1,0 +1,41 @@
+# tackling goal0, goal_0.78
+#exp_name: "PE_goal0_0.78"
+exp_name: "PE_pud_more_time_try"
+puddle_goal_type: 2
+torch_deterministic: true
+cuda: true
+track: true
+wandb_project_name: "simple-gvf-evaluations"
+wandb_entity: "jainarus"
+wandb_group: "PE_puddle_more_time_try"
+capture_video: false
+save_model: false
+upload_model: false
+hf_entity: ""
+run_save_loc: "/home/mila/j/jainarus/scratch/clean-rl/puddle/baseline_PE/random_states/try"
+
+#env_id: "DiscreteActionsPendulumEnv-v0"
+env_id: "PuddleMultiGoals-v0"
+#goal_position: 0.0 # don't change this
+#goal_positions_pe: [0.0, 0.78]
+
+#learning_rate: !!float 5e-5
+batch_size: 64
+
+total_timesteps: 8000
+buffer_size: 50000
+gamma: 0.99
+#tau: 1.0
+target_network_frequency: 100
+start_e: 0.5
+end_e: 0.0
+compute_mse_for_random_states: 1
+exploration_fraction: 0.002
+learning_starts: 200
+train_frequency: 4
+eval_frequency: 500
+checkpoint_frequency: 50000
+eval_episodes: 5
+
+# this is fixed, don't change
+checkpoint_number: 4500

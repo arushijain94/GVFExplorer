@@ -1,0 +1,42 @@
+exp_name: "2_FR"
+puddle_goal_type: 2
+torch_deterministic: true
+cuda: true
+track: true
+wandb_project_name: "simple-gvf-evaluations"
+wandb_entity: "jainarus"
+wandb_group: "baseline_FR_3"
+capture_video: false
+save_model: false
+upload_model: false
+hf_entity: ""
+run_save_loc: "/home/mila/j/jainarus/scratch/multi_room/baseline_FR/"
+
+env_id: "FourRoomsEnv-v0"
+#learning_rate: !!float 1e-4
+batch_size: 64
+
+total_timesteps: 1000000
+buffer_size: 25000
+gamma: 0.99
+tau: 1.0
+target_network_frequency: 100
+start_e: 1.0
+end_e: 0.0
+compute_mse_for_random_states: 1
+learning_starts: 200
+train_frequency: 4
+eval_frequency: 1000
+checkpoint_frequency: 200000
+eval_episodes: 5
+type_next_target_val: 0
+
+#prioritized_replay: 0 #1
+prioritized_replay_alpha: 0.6
+prioritized_replay_beta: 0.4
+
+plot_frequency: 50000
+q_type_loss: 1
+
+# this is fixed, don't change
+checkpoint_number: 4500

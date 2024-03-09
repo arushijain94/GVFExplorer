@@ -1,0 +1,35 @@
+# exp_name: "goal0" # [goal0, goal_neg0.78, goal1.57]
+exp_name: "goal_0.78"
+seed: 1
+torch_deterministic: true
+cuda: true
+track: false
+wandb_project_name: "simple-gvf-evaluations"
+wandb_entity: "jainarus"
+wandb_group: "simple_dqn_goal_eval_policies_greedy"
+capture_video: false
+save_model: true
+upload_model: false
+hf_entity: ""
+run_save_loc: "/home/mila/j/jainarus/scratch/clean-rl/single-reward-dqn"
+
+env_id: "DiscreteActionsPendulumEnv-v0"
+#goal_position: 0.0
+goal_position: 0.78
+total_timesteps: 10000
+learning_rate: !!float 2.5e-4
+buffer_size: 1000
+gamma: 0.99
+tau: 1.0
+target_network_frequency: 100
+batch_size: 64
+start_e: 0.1
+end_e: 0.01
+exploration_fraction: 0.01
+learning_starts: 100
+train_frequency: 4
+eval_frequency: 100
+checkpoint_frequency: 250
+eval_episodes: 10
+
+checkpoint_number: 5000

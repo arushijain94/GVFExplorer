@@ -1,0 +1,3 @@
+[submodule "VarianceReduction/emdp"]
+	path = VarianceReduction/emdp
+	url = git@github.com:arushijain94/ExplorationofGVFs.git
